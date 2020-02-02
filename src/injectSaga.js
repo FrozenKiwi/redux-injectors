@@ -84,11 +84,11 @@ export default ({ key, saga, mode }) => WrappedComponent => {
 const useInjectSaga = ({ key, saga, mode }) => {
   const store = useStore();
 
-  const isInjected = React.useRef(false);
+  const isInjected = React.useRef(undefined);
 
-  if (!isInjected.current) {
+  if (isInjected.current != key) {
     getInjectors(store).injectSaga(key, { saga, mode });
-    isInjected.current = true;
+    isInjected.current = key;
   }
 
   React.useEffect(

@@ -1,5 +1,5 @@
 {
-  "name": "redux-injectors",
+  "name": "@the-coin/redux-injectors",
   "version": "1.3.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
