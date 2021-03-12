@@ -6,6 +6,7 @@ const prettierOptions = JSON.parse(
 );
 
 module.exports = {
+  ignorePatterns: ["dist/*.js"],
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
   plugins: ['prettier', 'redux-saga', 'react', 'react-hooks'],
