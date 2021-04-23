@@ -68,11 +68,11 @@ export default ({ key, reducer }) => WrappedComponent => {
 const useInjectReducer = ({ key, reducer }) => {
   const store = useStore();
 
-  const isInjected = React.useRef(false);
+  const isInjected = React.useRef(undefined);
 
-  if (!isInjected.current) {
+  if (isInjected.current !== key) {
     getInjectors(store).injectReducer(key, reducer);
-    isInjected.current = true;
+    isInjected.current = key;
   }
 };
 

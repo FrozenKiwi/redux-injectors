@@ -1,6 +1,14 @@
 # <img src="https://raw.githubusercontent.com/react-boilerplate/redux-injectors/3d1e0d2be038bc710c5f319ca680dd6a1e88d5e8/img/logo.svg?sanitize=true" alt="alt text" width="400"></img>
 <img src="https://travis-ci.org/react-boilerplate/redux-injectors.svg?branch=master" alt="build status"></img>
 
+## Forked Differences
+
+This fork allows registering different reducers under the same hook (with differing keys).
+
+Motivation; swapping the active account in TheCoin.
+
+## Readme
+
 Dynamically load [redux](https://redux.js.org/) reducers and [redux-saga](https://redux-saga.js.org/) sagas as needed, instead of loading them all upfront. This has some nice benefits, such as avoiding having to manage a big global list of reducers and sagas. It also allows more effective use of [code-splitting](https://webpack.js.org/guides/code-splitting/). See [motivation](#Motivation). As used by [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate).
 
 ## Getting Started

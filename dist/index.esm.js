@@ -258,11 +258,11 @@ var useInjectReducer = function useInjectReducer(_ref2) {
   var key = _ref2.key,
       reducer = _ref2.reducer;
   var store = useStore();
-  var isInjected = React.useRef(false);
+  var isInjected = React.useRef(undefined);
 
-  if (!isInjected.current) {
+  if (isInjected.current !== key) {
     getInjectors$1(store).injectReducer(key, reducer);
-    isInjected.current = true;
+    isInjected.current = key;
   }
 };
 
